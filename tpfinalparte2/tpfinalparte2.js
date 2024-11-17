@@ -1,3 +1,7 @@
+//video ; https://youtu.be/q55xJoX0xsw?si=Hs0xvp2cO-zqleuo
+
+
+
 //declaración de variables
 let jugador;
 let balas = [];
