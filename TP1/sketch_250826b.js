@@ -1,6 +1,6 @@
 //sofia Gramajo
-//comision 2
-//https://youtu.be/-hopE8HGAfw
+//comision 5
+//https://youtu.be/Hh4cnQIJp3I?si=kOLMATVk7453yL1R
 let numCuadrados = 7;
 let tamanoCuadrado = 400 / numCuadrados; // Tamaño inicial de cada cuadrado
 let tamanoIncremento = 10; // Incremento de tamaño cuando se hace clic
@@ -91,3 +91,4 @@ function  keyPressed() {
  function  mousePressed() {
   colores = color(random (255),random (113),random(53),random(75));
 }
+
