@@ -1,6 +1,7 @@
 //Sofia Gramajo 119051/4
 // Lourdes Godoy 
 // tpfinalparte 1 -  la lampara de aladin
+//https://www.youtube.com/watch?v=6-Z7iezHGhY&t=5s
  
 let estadoActual = 0; //  para empezar en la Portada (pantalla 0)
 let pantalla = []; //arreglo para las pantallas
@@ -189,3 +190,4 @@ function keyPressed() {
     }
   }
 }
+
