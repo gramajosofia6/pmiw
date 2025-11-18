@@ -6,8 +6,8 @@
      this.tiempoRestante = 30;
     this.objetosEncontrados = 0;
     this.totalObjetos = totalObjetos;
-     this.objetosEscondidos = []; // Arreglo de instancias de ObjetoEscondido
-    this.barra = new barra(); // Instancia de la clase barra
+     this.objetosEscondidos = []; // arreglo de instancias de ObjetoEscondido
+    this.barra = new barra(); //instancia de la clase barra
    }
 
     iniciar() {
@@ -43,7 +43,7 @@
         obj.encontrado = true;
         this.objetosEncontrados++;
 
-        // Revisa si ganó
+        // revisa si ganó
         if (this.objetosEncontrados >= this.totalObjetos) {
           this.estado = "GANAR";
         }
@@ -53,14 +53,14 @@
    }
 
     actualizarTiempo() {
-    // Solo cuenta los 30 segundos del tiempo si estamos jugando
+    // solo cuenta los 30 segundos del tiempo si estamos jugando
     if (this.estado === "JUGANDO") {
 
       if (frameCount % 60 === 0 && this.tiempoRestante > 0) {
         this.tiempoRestante--;
       }
+     }
     }
-  }
 
   revisarCondiciones() {
     if (this.estado === "JUGANDO") {
@@ -110,7 +110,7 @@
 
     dibujarIntroduccion() {
     image(fondos.introduccion, 0, 0, width, height);
-    image(fondos.sonido, 15, 15, 40, 40); //icono de sonido
+    image(fondos.sonido, 15, 15, 40, 40); 
     fill(255);
      textAlign(CENTER, CENTER);
     textSize(15);
@@ -120,7 +120,7 @@
 
      dibujarInstrucciones() {
      image(fondos.instrucciones, 0, 0, width, height);
-    image(fondos.sonido, 15, 15, 40, 40); //icono de sonido
+    image(fondos.sonido, 15, 15, 40, 40); 
     fill(255);
     textAlign(CENTER, CENTER);
     textSize(15);
@@ -135,8 +135,8 @@
     image(fondos.juego, 0, 0, width, height);
 
      for (let obj of this.objetosEscondidos) {
-      // tenemos la imagen correcta del arreglo iconosItem
-      // el indiceImagen del objeto nos dice que imagen usar
+
+   // el indiceImagen del objeto nos dice que imagen usar
       let img = iconosItem[obj.indiceImagen];
       // verificamos que la imagen exista para evitar errores si algo falla en la carga
       if (img) {
@@ -147,24 +147,24 @@
 
         image(img, obj.x, obj.y, obj.ancho, obj.alto);
 
-        pop(); // restaura la configuración de dibujo original (deshace el tint para otros dibujos)
+        pop(); // restaura la configuración de dibujo original ,deshace el tint para otros dibujos
       }
     }
-      // le pasamos el tiempo restante y el arreglo de objetos para que sepa qué mostrar
+      // le pasamos el tiempo restante y el arreglo de objetos para que sepa qui mostrar
         this.barra.dibujar(this.tiempoRestante, this.objetosEscondidos);
   }
 
       dibujarFinal(resultado) {
     let imagenFinal = (resultado === "GANAR") ? fondos.ganar : fondos.perder;
     image(imagenFinal, 0, 0, width, height);
-     image(fondos.sonido, 15, 15, 40, 40); //icono de sonido
+     image(fondos.sonido, 15, 15, 40, 40); 
      btnReiniciar.dibujar();
       btnCreditos.dibujar();
   }
 
     dibujarCreditos() {
     image(fondos.creditos, 0, 0, width, height);
-    image(fondos.sonido, 15, 15, 40, 40); //icono de sonido
+    image(fondos.sonido, 15, 15, 40, 40); 
      fill(255);
     textAlign(CENTER, CENTER);
     textSize(36);
@@ -174,3 +174,4 @@
       btnVolver.dibujar();
     }
   }
+
