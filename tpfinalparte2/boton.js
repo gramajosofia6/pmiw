@@ -8,8 +8,8 @@
       this.alto = alto;   // alto del área del botn
    }
 
-  // dibuja el botón
-    dibujar() {
+
+      dibujar() {
 
     rectMode(CORNER);
     fill(135, 36, 119);
@@ -24,16 +24,17 @@
      textAlign(CENTER, CENTER);
 
     // centra el texto dentro
-     text(this.texto, this.x + this.ancho / 2, this.y + this.alto / 2);
+        text(this.texto, this.x + this.ancho / 2, this.y + this.alto / 2);
   }
 
     fuePresionado(px, py) {
-    // lógica de detección de clic
-     return (
+      // lógica de detección de clic
+       return (
       px > this.x &&
-      px < this.x + this.ancho &&
+       px < this.x + this.ancho &&
       py > this.y &&
-      py < this.y + this.alto
-      );
-    }
-  }   
+       py < this.y + this.alto
+       );
+     }
+   }   
+
